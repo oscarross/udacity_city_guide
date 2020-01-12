@@ -1,7 +1,6 @@
 package com.rosolowski.oskar.cityguide.Adapters;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,12 +36,7 @@ public class PlacesAdapter extends ArrayAdapter<Place> {
         titleTextView.setText(currentPlace.getNameTranslationId());
 
         ImageView imageView = listView.findViewById(R.id.place_list_item_image);
-        if (currentPlace.hassImage()) {
-            imageView.setImageResource(currentPlace.getImageResourceId());
-            imageView.setVisibility(View.VISIBLE);
-        } else {
-            imageView.setVisibility(View.GONE);
-        }
+        imageView.setImageResource(currentPlace.getImageResourceId());
 
         return listView;
     }

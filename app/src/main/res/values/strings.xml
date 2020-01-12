@@ -18,4 +18,9 @@
     <string name="karczowka_desc">Landscape semi-reserve, area 26.55 ha. Established in 1953. Situated about 2 km to the west of the centre of Kielce. The best approach from the centre is along Karczówkowska Street.</string>
     <string name="sufraganiec_name">Sufraganiec</string>
     <string name="sufraganiec_desc">A semi-reserve, area 17.31 ha, established in 1961. Near the northern border of the city, between the road by-pass of Kielce (Wiśniówka – Chęciny) and the Kielce – Warsaw railway line. The best road approach along the streets Łódzka and Hubalczyków.</string>
+    <string name="da_vinci_name">Science Center Leonardo da Vinci</string>
+    <string name="da_vinci_desc">Science Center Leonardo da Vinci is a branch of the Regional Center for Science and Technology. This is a remarkable point on the map Świętokrzyskie region, designed for active recreation and inspiring. It\'s the perfect place for families with children, school groups, active seniors … for all! The main idea of the Center is to arouse interest among the visitors to the natural sciences, through active and creative attitude of strengthening educational activities, topped with delicious fun.</string>
+    <string name="korona_kielce_stadion_name">Kielce City Stadium</string>
+    <string name="korona_kielce_stadion_desc">The Kolporter Arena (official name) is a multi-purpose stadium in Kielce, Poland. It is currently used mostly for football matches and is the home ground of Korona Kielce. The stadium holds 15,500 and was built in 2006. At the time, it was one of the most modern football stadiums in Poland. </string>
+    <string name="yellow_elephant_name">Żólty słoń</string>
 </resources>

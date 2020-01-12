@@ -7,16 +7,13 @@ public class Place {
         RESTAURANT, MONUMENT, NATURERESERVE, OTHER
     }
 
-    private static final int NO_IMAGE = -1;
+    private static final int NO_RESOURCE = -1;
 
     private int nameTranslationId;
-
-
-
-    private int descriptionTranslationId;
+    private int descriptionTranslationId = NO_RESOURCE;
     private Type type;
     private String location;
-    private int imageResourceId = NO_IMAGE;
+    private int imageResourceId;
 
     public Place(int nameTranslationId, int descriptionTranslationId, Type type, String location, int imageResourceId) {
         this.nameTranslationId = nameTranslationId;
@@ -26,11 +23,11 @@ public class Place {
         this.imageResourceId = imageResourceId;
     }
 
-    public Place(int nameTranslationId, int description, Type type, String location) {
+    public Place(int nameTranslationId, Type type, String location, int imageResourceId) {
         this.nameTranslationId = nameTranslationId;
-        this.descriptionTranslationId = descriptionTranslationId;
         this.type = type;
         this.location = location;
+        this.imageResourceId = imageResourceId;
     }
 
     public int getNameTranslationId() {
@@ -47,7 +44,7 @@ public class Place {
 
     public int getImageResourceId() { return imageResourceId; }
 
-    public boolean hassImage() { return imageResourceId != NO_IMAGE; }
+    public boolean hassDesc() { return descriptionTranslationId != NO_RESOURCE; }
 
     @NonNull
     @Override

@@ -28,7 +28,7 @@ public class DatabaseStore {
 
     private ArrayList<Place> mockRestaurants() {
         final ArrayList<Place> places = new ArrayList<>();
-//        places.add(new Place("Żółty Słoń", "description", Place.Type.RESTAURANT, "location"));
+        places.add(new Place(R.string.yellow_elephant_name, Place.Type.RESTAURANT, "Kielce", R.drawable.yellow_elephant));
 
         return places;
     }
@@ -44,6 +44,8 @@ public class DatabaseStore {
     private ArrayList<Place> mockOtherInterestingPlaces() {
         final ArrayList<Place> places = new ArrayList<>();
         places.add(new Place(R.string.wietrznia_name, R.string.wietrznia_desc, Place.Type.OTHER, "Wietrznia", R.drawable.geoeducation));
+        places.add(new Place(R.string.korona_kielce_stadion_name, R.string.korona_kielce_stadion_desc, Place.Type.OTHER,"Kielce", R.drawable.korona));
+        places.add(new Place(R.string.da_vinci_name, R.string.da_vinci_desc, Place.Type.OTHER,"Podzamcze", R.drawable.da_vinci));
 
         return places;
     }
@@ -54,7 +56,7 @@ public class DatabaseStore {
         places.add(new Place(R.string.karczowka_name, R.string.karczowka_desc, Place.Type.NATURERESERVE, "Kielce", R.drawable.karczowka));
         places.add(new Place(R.string.paradise_cave_name, R.string.paradise_cave_desc, Place.Type.NATURERESERVE, "Kielce", R.drawable.paradise_cave));
         places.add(new Place(R.string.slichowice_name, R.string.slichowice_desc, Place.Type.NATURERESERVE, "Kielce", R.drawable.slichowice));
-        places.add(new Place(R.string.sufraganiec_name, R.string.sufraganiec_desc, Place.Type.NATURERESERVE, "Kielce", R.drawable.sufraganiec));
+        places.add(new Place(R.string.sufraganiec_name, R.string.sufraganiec_desc, Place.Type.NATURERESERVE, "Sufraganiec", R.drawable.sufraganiec));
 
         return places;
     }
