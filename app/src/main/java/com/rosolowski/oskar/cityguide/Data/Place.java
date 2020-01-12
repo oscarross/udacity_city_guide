@@ -9,30 +9,35 @@ public class Place {
 
     private static final int NO_IMAGE = -1;
 
-    private String name;
-    private String description;
+    private int nameTranslationId;
+
+
+
+    private int descriptionTranslationId;
     private Type type;
     private String location;
     private int imageResourceId = NO_IMAGE;
 
-    public Place(String name, String description, Type type, String location, int imageResourceId) {
-        this.name = name;
-        this.description = description;
+    public Place(int nameTranslationId, int descriptionTranslationId, Type type, String location, int imageResourceId) {
+        this.nameTranslationId = nameTranslationId;
+        this.descriptionTranslationId = descriptionTranslationId;
         this.type = type;
         this.location = location;
         this.imageResourceId = imageResourceId;
     }
 
-    public Place(String name, String description, Type type, String location) {
-        this.name = name;
-        this.description = description;
+    public Place(int nameTranslationId, int description, Type type, String location) {
+        this.nameTranslationId = nameTranslationId;
+        this.descriptionTranslationId = descriptionTranslationId;
         this.type = type;
         this.location = location;
     }
 
-    public String getName() {
-        return name;
+    public int getNameTranslationId() {
+        return nameTranslationId;
     }
+
+    public int getDescriptionTranslationId() { return descriptionTranslationId; }
 
     public Type getType() {
         return type;
@@ -47,6 +52,6 @@ public class Place {
     @NonNull
     @Override
     public String toString() {
-        return "Place - " + name;
+        return "Place - " + nameTranslationId;
     }
 }

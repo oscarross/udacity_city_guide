@@ -1,10 +1,12 @@
 package com.rosolowski.oskar.cityguide.Adapters;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,8 +33,16 @@ public class PlacesAdapter extends ArrayAdapter<Place> {
 
         Place currentPlace = getItem(position);
 
-        TextView titleTextView = (TextView) listView.findViewById(R.id.place_list_item_title);
-        titleTextView.setText(currentPlace.getName());
+        TextView titleTextView = listView.findViewById(R.id.place_list_item_title);
+        titleTextView.setText(currentPlace.getNameTranslationId());
+
+        ImageView imageView = listView.findViewById(R.id.place_list_item_image);
+        if (currentPlace.hassImage()) {
+            imageView.setImageResource(currentPlace.getImageResourceId());
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            imageView.setVisibility(View.GONE);
+        }
 
         return listView;
     }
