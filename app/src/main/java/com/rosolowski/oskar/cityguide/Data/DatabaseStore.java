@@ -14,18 +14,40 @@ public class DatabaseStore {
     }
 
     public ArrayList<Place> getPlacesForType(Place.Type type) {
-        switch (type)
-        {
-            case RESTAURANT:
-                return mockRestaurants();
-            default:
-                return new ArrayList<>();
+        switch (type) {
+            case NATURERESERVE: return mockNatureReserves();
+            case OTHER: return mockOtherInterestingPlaces();
+            case RESTAURANT: return mockRestaurants();
+            case MONUMENT: return mockMonuments();
         }
+
+        return null;
     }
 
     private ArrayList<Place> mockRestaurants() {
         final ArrayList<Place> places = new ArrayList<>();
-        places.add(new Place("Żółty Słoń", Place.Type.RESTAURANT));
+        places.add(new Place("Żółty Słoń", "description", Place.Type.RESTAURANT, "location"));
+
+        return places;
+    }
+
+    private ArrayList<Place> mockMonuments() {
+        final ArrayList<Place> places = new ArrayList<>();
+        places.add(new Place("Monument", "desc1", Place.Type.MONUMENT, "location"));
+
+        return places;
+    }
+
+    private ArrayList<Place> mockOtherInterestingPlaces() {
+        final ArrayList<Place> places = new ArrayList<>();
+        places.add(new Place("Other", "desc1", Place.Type.OTHER, "location"));
+
+        return places;
+    }
+
+    private ArrayList<Place> mockNatureReserves() {
+        final ArrayList<Place> places = new ArrayList<>();
+        places.add(new Place("Nature", "desc1", Place.Type.NATURERESERVE, "location"));
 
         return places;
     }
