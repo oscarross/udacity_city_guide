@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 public class Place {
 
     public enum Type {
-        RESTAURANT, MONUMENT, NATURE, OTHER
+        RESTAURANT, MONUMENT, NATURERESERVE, OTHER
     }
 
     private String name;
