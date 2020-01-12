@@ -23,4 +23,8 @@
     <string name="korona_kielce_stadion_name">Kielce City Stadium</string>
     <string name="korona_kielce_stadion_desc">The Kolporter Arena (official name) is a multi-purpose stadium in Kielce, Poland. It is currently used mostly for football matches and is the home ground of Korona Kielce. The stadium holds 15,500 and was built in 2006. At the time, it was one of the most modern football stadiums in Poland. </string>
     <string name="yellow_elephant_name">Żólty słoń</string>
+    <string name="nature_category_title">Nature</string>
+    <string name="other_category_title">Other</string>
+    <string name="restaurants_category_title">Restaurants</string>
+    <string name="monuments_category_title">Monuments</string>
 </resources>

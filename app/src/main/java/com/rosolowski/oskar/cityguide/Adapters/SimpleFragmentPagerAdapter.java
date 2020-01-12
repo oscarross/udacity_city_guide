@@ -1,5 +1,7 @@
 package com.rosolowski.oskar.cityguide.Adapters;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -8,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.rosolowski.oskar.cityguide.Data.DatabaseStore;
 import com.rosolowski.oskar.cityguide.Data.Place;
+import com.rosolowski.oskar.cityguide.R;
 import com.rosolowski.oskar.cityguide.Views.MonumentsFragment;
 import com.rosolowski.oskar.cityguide.Views.NatureReservesFragment;
 import com.rosolowski.oskar.cityguide.Views.OtherPlacesFragment;
@@ -18,10 +21,12 @@ import java.util.ArrayList;
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private ArrayList<Place.Type> categories;
+    private Context context;
 
-    public SimpleFragmentPagerAdapter(@NonNull FragmentManager fm) {
+    public SimpleFragmentPagerAdapter(@NonNull FragmentManager fm, Context context) {
         super(fm);
 
+        this.context = context;
         this.categories = new DatabaseStore().getCategories();
     }
 
@@ -50,11 +55,11 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         Place.Type category = categories.get(position);
 
-        switch (category) { //TODO: get from strings
-            case NATURERESERVE: return "Nature";
-            case OTHER: return "Other";
-            case RESTAURANT: return "Restaurants";
-            case MONUMENT: return "Monuments";
+        switch (category) {
+            case NATURERESERVE: return context.getString(R.string.nature_category_title);
+            case OTHER: return context.getString(R.string.other_category_title);
+            case RESTAURANT: return context.getString(R.string.restaurants_category_title);
+            case MONUMENT: return context.getString(R.string.monuments_category_title);
         }
 
         return null;
